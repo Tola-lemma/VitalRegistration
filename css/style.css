@@ -1,0 +1,374 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar styling */
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;/* hide Header below navbar*/
+    font-family:sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;  /* sets the flexible length on flexible items. Display:flex apply flex layout to the flex items or children of the container only*/
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color:#fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+   color: crimson;
+   transition: all 0.3s ease;   
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+/* menu button styling */
+.menu-btn img {
+    width: 15px;
+    height: 15px;
+    mix-blend-mode:multiply;
+     cursor: pointer;
+     display: none;
+ }
+  .navbar.sticky .menu-btn img {
+     width: 30px;
+     height: 30px;
+     mix-blend-mode: multiply;
+      cursor: pointer;
+  }
+/* Home section styling */
+.home{
+    display: flex;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url('../image/background.jpg') no-repeat center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover ;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 500px;
+    font-family:sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px ;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+     color: crimson;
+     font-weight: 500;
+}
+  /* Responsive media query start */
+  /* @media(max-width: 947px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn img{
+        width: 20px;
+        height: 20px; 
+        mix-blend-mode:color-dodge;
+         cursor: pointer;
+         display: block;
+         z-index:999;
+    }
+     .menu-btn img i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+  } */
+  /* registration style */
+  .form{
+background-color: rgb(226, 222, 222);
+
+  }
+
+  .reg{
+    position: relative;
+    border: 3px none antiquewhite;
+    /* background-color: antiquewhite; */
+    padding: 10px;
+  }
+ 
+  .registration{
+      display:flex;
+      margin: 20px;
+      justify-content: space-between;
+  }
+  #formMarriage,#formBirth,#formDeath{
+    display:none;
+  }
+#left,#center,#right{
+    width: 33.33%;
+    border: 0px solid black;
+    height: 400px;
+    text-align: center;
+    margin: 40px;
+    padding-top: 50px;
+    transition: 0.5s;
+    display: inline;
+}
+#Btable,#Mtable,#Dtable{
+    width: 600px;
+    height: 400px;
+    font-size: 20px;
+}
+#submit{
+    font-size: 20px;
+    display:flex;
+    align-content: center;
+}
+#btn,#btn2,#btn3{
+    height: 50px;
+    width: 150px;
+    border:none;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 40px;
+    background-color:white;
+}
+#btn:hover,#btn2:hover,#btn3:hover{
+    background: linear-gradient(rgba(220,20,60,0.7),rgba(220,20,60,0.7));
+    transform: scale(1.05);    
+}
+#left:hover,#center:hover,#right:hover{
+    background: linear-gradient(rgba(220,20,60,0.7),rgba(220,20,60,0.7));
+    transform: scale(1.05);
+}
+#left{
+    
+    background: #f1f1f1;
+}
+#center{
+    
+    
+    background: #f1f1f1;
+}
+#right{
+    
+    background: #f1f1f1;
+}
+/* about page */
+#aboutimg{
+    padding: 20px;
+    background-size: cover;
+    float: left;
+    width: 300px;
+    height: 100%;
+}
+#para{
+    font-size: 24px;
+
+}
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.about .teams {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* teams section styling */
+.teams .title::after{
+    content: "who Involved";
+}
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover{
+    background: wheat;
+}
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+}
+
+/* summary */
+
+
+.sumr-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.summary .sumr-content .card{
+    width: calc(33% - 20px);
+    background: #f1f1f1;
+    text-align: center;
+    border-radius: 6px;
+    padding: 100px;
+    height:400px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.summary .sumr-content .card:hover{
+    background: wheat;
+}
+.summary .sumr-content .card .box{
+    transition: all 0.3s ease;
+}
+.summary .sumr-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+a{
+    text-decoration:none;
+    color:red;
+}
+.summary .sumr-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}

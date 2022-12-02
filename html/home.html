@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application development</title>
+    <link rel="stylesheet" href="../css/style.css">
+   
+</head>
+<body>
+    <!-- navigation -->
+    <header>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#">ወሳኝ<span> ኩነት</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#reg" class="menu-btn">Registration</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#summary" class="menu-btn">Summary</a></li>
+                <li><a href="#teams" class="menu-btn">Teams</a></li>
+            </ul>
+            <div class="menu-btn">
+            <img src="../image/bars.jpg" alt="bars">
+            </div>
+        </div>
+    </nav>
+</header>
+    <!-- Home section  -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">የወሳኝ ኩነት ምዝገባ </div>
+                <div class="text-2">Vital Event Registration</div>
+                <div class="text-3"><span id="typing">vital registration</span></div>
+            </div>
+        </div>
+    </section>
+
+     <!-- registration section start -->
+     
+     
+ <section id="reg">
+<div class="max-width">
+    <h1 class="title">Register Here</h1>
+    <!-- <img src="image/birth.jpg" alt="logo" id="myim" width="100%" height="200px"> -->
+     <div class="registration" id="registration">
+        <div class="reg">
+         <button id="btn" onclick="showBirth()" class="buttons"><h1>Birth</h1> </button>
+    
+          <div id="frmBirth">
+            <form method="POST" action="../php/Birth.php" class="form" id="formBirth" name="myForm" onsubmit="return validateBirth()"> 
+                 <table id="Btable">
+                 <tr><td>First Name:</td><td><input type="text" name="firstname" required></td></tr>
+                 <tr><td>Father Name:</td><td><input type="text" name="fathername" required></td></tr>
+                 <tr><td>Mother Name:</td><td><input type="text" name="mothername" required></td></tr>
+                 <tr><td>Sex:</td><td>Male:<input type="radio" name="sex" value="Male">Female:<input type="radio" name="sex" value="Female"></td></tr>
+                 <tr><td>DOB:</td><td><input type="date"name="dob" required></td></tr>
+                 <tr><td>Religion</td><td><input type="text" name="religion" required></td></tr>
+                 <tr><td>Place Of Birth:</td><td><input type="text" name="pob" required></td></tr>
+                 <tr><td>Nationality:</td><td>
+                    <select name="nationality">
+                    <option value="">-- select one --</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="Ethiopian">Ethiopian</option>
+                    <option value="angolan">Angolan</option>
+                    <option value="Ertirian">Ertirian</option>
+                    <option value="argentinean">Argentinean</option>
+                    <option value="armenian">Armenian</option>
+                    <option value="South Africa">South African</option>
+                    <option value="australian">Australian</option>
+                    <option value="austrian">Austrian</option>
+                    <option value="azerbaijani">Azerbaijani</option>
+                    <option value="bahamian">Bahamian</option>
+                    <option value="Arabian">Arabian</option>
+                    <option value="bangladeshi">Bangladeshi</option>
+                    <option value="barbadian">Barbadian</option>
+                    <option value="batswana">Batswana</option></select></td></tr>
+             </table>
+             <input type="submit" value="Submit" id="submit" name="submit">
+         </form>
+         </div>
+        </div>
+    <div class="reg">
+        <button id="btn2" onclick="showMarriage()" class="buttons" ><h1>Marriage</h1> </button>
+        <div id="frmMarriage">
+        <form method="POST"  action="../php/marriage.php" class="form" id="formMarriage" name="myForm"  onsubmit="return validateMarriage()"> 
+        <table id="Mtable">
+            <tr><td>Husband First Name:</td><td><input type="text" name="Hfirstname" required></td></tr>
+            <tr><td>Husband Last Name:</td><td><input type="text" name="Hlastname" required></td></tr>
+            <tr><td>Husband DOB:</td><td><input type="date"name="Hdob" required ></td></tr>
+            <tr><td>Husband Religion</td><td><input type="text" name="Hreligion" required></td></tr>
+            <tr><td>Husband Nationality:</td><td>
+                <select name="Hnationality">
+                    <option value="">-- select one --</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="Ethiopian">Ethiopian</option>
+                    <option value="angolan">Angolan</option>
+                    <option value="Ertirian">Ertirian</option>
+                    <option value="argentinean">Argentinean</option>
+                    <option value="armenian">Armenian</option>
+                    <option value="South Africa">South African</option>
+                    <option value="australian">Australian</option>
+                    <option value="austrian">Austrian</option>
+                    <option value="azerbaijani">Azerbaijani</option>
+                    <option value="bahamian">Bahamian</option>
+                    <option value="Arabian">Arabian</option>
+                    <option value="bangladeshi">Bangladeshi</option>
+                    <option value="barbadian">Barbadian</option>
+                    <option value="batswana">Batswana</option></select>
+                </td></tr>
+            <tr><td>Wife First Name:</td><td><input type="text" name="Wfirstname" required></td></tr>
+            <tr><td>Wife last Name:</td><td><input type="text" name="Wlastname" required></td></tr>
+            <tr><td>Wife DOB:</td><td><input type="date" name="Wdob" required></td></tr>
+            <tr><td>Wife Religion</td><td><input type="text" name="Wreligion" required></td></tr>
+            <tr><td>Wife Nationality:</td><td>
+                <select name="Wnationality">
+                    <option value="">-- select one --</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="Ethiopian">Ethiopian</option>
+                    <option value="angolan">Angolan</option>
+                    <option value="Ertirian">Ertirian</option>
+                    <option value="argentinean">Argentinean</option>
+                    <option value="armenian">Armenian</option>
+                    <option value="South Africa">South African</option>
+                    <option value="australian">Australian</option>
+                    <option value="austrian">Austrian</option>
+                    <option value="azerbaijani">Azerbaijani</option>
+                    <option value="bahamian">Bahamian</option>
+                    <option value="Arabian">Arabian</option>
+                    <option value="bangladeshi">Bangladeshi</option>
+                    <option value="barbadian">Barbadian</option>
+                    <option value="batswana">Batswana</option></select>
+                </td></tr>
+            <tr><td>DOM:</td><td><input type="date" name="dom" ></td></tr>
+        </table>
+        <input type="submit" value="submit" id="submit" name="submit" >
+        </form> 
+        </div>
+    </div>
+    <div class="reg">
+        <button id="btn3" onclick="showDeath()" class="buttons"><h1>Death</h1> </button>
+        <br>
+        <br>
+        <div id="frmDeath">
+        <form method="POST"  action="../php/Death.php" class="form" id="formDeath" name="myForm" onsubmit="return validateDeath()">
+        <table id="Dtable">
+            <tr><td>Deceased's Name </td><td><input type="text" id="dname" name="dname" required></td></tr>
+            <tr><td>Father's Name</td> <td><input type="text" id="fdname" name="fdname" required></td></tr>
+            <tr><td>Sex:</td><td>Male:<input type="radio" name="dsex" value="Male">Female:<input type="radio" name="dsex" value="Female"></td></tr>
+            <tr><td>DOB</td><td><input type="date" name="ddate" id="ddate" required></td></tr>
+            <tr><td>Nationality</td><td>
+                <select name="dnation">
+                    <option value="">-- select one --</option>
+                    <option value="afghan">Afghan</option>
+                    <option value="albanian">Albanian</option>
+                    <option value="algerian">Algerian</option>
+                    <option value="american">American</option>
+                    <option value="Ethiopian">Ethiopian</option>
+                    <option value="angolan">Angolan</option>
+                    <option value="Ertirian">Ertirian</option>
+                    <option value="argentinean">Argentinean</option>
+                    <option value="armenian">Armenian</option>
+                    <option value="South Africa">South African</option>
+                    <option value="australian">Australian</option>
+                    <option value="austrian">Austrian</option>
+                    <option value="azerbaijani">Azerbaijani</option>
+                    <option value="bahamian">Bahamian</option>
+                    <option value="Arabian">Arabian</option>
+                    <option value="bangladeshi">Bangladeshi</option>
+                    <option value="barbadian">Barbadian</option>
+                    <option value="batswana">Batswana</option></select>
+                </td></tr>
+            <tr><td>Place Of Birth</td><td><input type="text" name="dplace" id="dplace"></td></tr>
+            <tr><td>Date Of death Registration</td><td><input type="date" id="ddr" name="ddr"></td></tr>
+            <tr><td>Cause of Death</td><td><textarea name="txtArea" cols="17" rows="4" value="cause of Death" placeholder="write here cause of his/her Death" ></textarea></td></tr> 
+        </table>
+        <input type="submit" value="submit" id="submit" name="submit" >
+    </form>  
+    <script src="../js/validate.js"></script>
+     </div>
+</div>
+</div>
+</section>
+      <!-- About page -->
+        <section class="about" id="about">
+        <div class="max-width">
+            <h1 class="title" >ABOUT VITAL REGISTRATION</h1>
+           <img src="../image/about.webp" alt="about page" id="aboutimg">
+               
+                    <p id="para">
+                
+                        Vital or civil registration is the system by which a government
+                         records the vital events of its citizens and residents. 
+                         Vital registration creates legal documents which may be used to establish and protect the civil rights of individuals, 
+                         as well as providing a source of data which may be compiled to give vital statistics.
+                        
+                        In contrast to censuses, which collect information on every member of a population at a single point in time, 
+                        vital registration systems collect information on individuals as demographic events occur.
+                         You may also see ‘vital registration’ called ‘civil registration’, which is the preferred term of the UN .
+                          Many vital registration systems record births, deaths, foetal deaths, 
+                         marriages, divorces and adoptions, 
+                         as well as recording information on the individual who experiences the event, such as age, religion, occupation etc. 
+                        These data are then compiled into vital statistics bulletins.
+                    </p>
+        </div>
+        </section>
+<!-- summary section start -->
+    <section class="summary" id="summary">
+        <div class="max-width">
+            <h2 class="title">Summary</h2>
+            <div class="sumr-content">
+                <div class="card">
+                    <div class="box">
+                        <div class="text">Birth</div>
+                        <p>To find the number of people born <a href="../php/viewBirth.php" >click here</a></p>
+                        <hr>
+                        <p>To Update religion<a href="../html/UpdateReligion.html" >click here</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="text">Marriage</div>
+                        <p>To find the number of Marriage <a href="../php/ViewMarriage.php" >click here</a></p>
+                        <hr>
+                        <p>To see number of married couple at specified year <a href="../html/MarriageSince.html" >click here</a></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <div class="text">Death</div>
+                        <p>To find the number of Death <a href="../php/ViewDeath.php" >click here</a></p><hr>
+                        <p>To see number of death at specified age by Disease  <a href="../html/retrivedeath.html" >click here</a></p>
+                    </div> 
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+        <!-- teams section start -->
+    <section class="teams" id="teams">
+        <div class="max-width">
+            <h2 class="title" >Teams </h2>
+            <div class="carousel owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <img src="../image/tola.JPG" alt="Tola Lemma">
+                        <div class="text">Tola Lemma</div>
+                        <p>I'm third year computer science student at Addis Ababa University.</p>
+                         <p><a href="mailto:tolalemma@gmail.com">Send Email</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="../image/yeabsera.jpg" alt="">
+                        <div class="text">Yeabisera Tesfaye</div>
+                        <p>I'm third year computer science student at Addis Ababa University.</p>
+                        <p><a href="mailto:yeabiserat@gmail.com">Send Email</a></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="../image/sami.jpg" alt="">
+                        <div class="text">Samuel Kibret</div>
+                        <p>I'm third year computer science student at Addis Ababa University.</p>
+                        <p><a href="mailto:samuelkibret728@gmail.com">Send Email</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <script src="../js/script.js"></script>
+  
+</body>
+</html>
