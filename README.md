@@ -1,2 +1,2 @@
-# VitalRegistration
+# Vital Registration
 Vital registration web
