@@ -3,7 +3,7 @@ The Vital Registration System is a web-based application that enables the regist
 # Getting Started
 To get started with the Vital Registration System, follow these steps:
 
-1. Clone the repository: git clone https://github.com/username/vital-registration-system.git
+1. Clone the repository: git clone https://github.com/Tola_Lemma/VitalRegistration.git
 2. Create a MySQL database and import the SQL file in the database folder.
 3. Update the database configuration settings in the config.php file.
 4. Upload the application files to a web server or start a local web server using XAMPP or WAMP.
@@ -13,3 +13,6 @@ The system is built using the following technologies:
 
 - HTML, CSS, and JavaScript: Front-end user interface
 - PHP for backend and MySQL for database 
+
+# Contributing
+If you'd like to contribute to the Vital Registration System, please fork the repository and make changes as you'd like. Pull requests are welcome.
